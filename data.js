@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────────────────────
 // Everything on the site that changes lives here.
-// New mix → add to `sets` (newest first). New gig → add to `gigs`.
+// New mix → add to the END of `sets` (oldest first, newest last). New gig → add to `gigs`.
 // Dates are "YYYY-MM-DD" (use "-01" if you only know the month).
 // Gigs with a date in the future show up as "Upcoming" automatically.
 // ─────────────────────────────────────────────────────────────
@@ -25,16 +25,10 @@ window.SITE = {
 
   sets: [
     {
-      title: "VOL.I MAD",
-      date: "2024-11-05",
+      title: "House Trancadito",
+      date: "2019-03-14",
       note: "",
-      soundcloud: "https://soundcloud.com/juancasanova00/vol1-mad",
-    },
-    {
-      title: "Febrero 23",
-      date: "2023-02-27",
-      note: "",
-      soundcloud: "https://soundcloud.com/juancasanova00/febrero-23",
+      soundcloud: "https://soundcloud.com/juancasanova00/house-trancadito-14032019",
     },
     {
       title: "Quarantine",
@@ -43,10 +37,16 @@ window.SITE = {
       soundcloud: "https://soundcloud.com/juancasanova00/quarentine",
     },
     {
-      title: "House Trancadito",
-      date: "2019-03-14",
+      title: "Febrero 23",
+      date: "2023-02-27",
       note: "",
-      soundcloud: "https://soundcloud.com/juancasanova00/house-trancadito-14032019",
+      soundcloud: "https://soundcloud.com/juancasanova00/febrero-23",
+    },
+    {
+      title: "VOL.I MAD",
+      date: "2024-11-05",
+      note: "",
+      soundcloud: "https://soundcloud.com/juancasanova00/vol1-mad",
     },
   ],
 
