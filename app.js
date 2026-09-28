@@ -215,7 +215,9 @@
 
   // Gigs
   const today = new Date(); today.setHours(0, 0, 0, 0);
-  const gigs = S.gigs.filter((g) => g.venue && !/tbc/i.test(g.venue)).sort((a, b) => parse(b.date) - parse(a.date));
+  const valid = S.gigs.filter((g) => g.venue && !/tbc/i.test(g.venue));
+  const undated = valid.filter((g) => !g.date);   // venues played, exact date unknown
+  const gigs = valid.filter((g) => g.date).sort((a, b) => parse(b.date) - parse(a.date));
   const upcoming = gigs.filter((g) => parse(g.date) >= today).reverse();
   const past = gigs.filter((g) => parse(g.date) < today);
   const gigRow = (g, cls = '') => `
@@ -226,6 +228,12 @@
     </div>`;
   // Venues wall — every place played, most recent first, counted once
   const venues = [...new Map(past.map((g) => [g.venue, g])).values()];
+  // Undated venues go right after the last venue from the same city (or at the end)
+  undated.forEach((g) => {
+    if (venues.some((v) => v.venue === g.venue)) return;
+    const lastSameCity = venues.map((v) => v.city).lastIndexOf(g.city);
+    venues.splice(lastSameCity === -1 ? venues.length : lastSameCity + 1, 0, g);
+  });
   const SHOWN = 6;
   $('gigList').innerHTML = `
     ${venues.length ? `

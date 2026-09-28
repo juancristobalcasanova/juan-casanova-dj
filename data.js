@@ -113,6 +113,10 @@ window.SITE = {
   // Add `with: "Artist"` to show who else was on the bill.
   gigs: [
     // TODO Juan: April 2026 gig — add it here once you tell me the venue
+    // Venues without a known date (no `date`) still show on the "Played at" wall
+    { venue: "Istar", city: "Madrid" },
+    { venue: "Bonded", city: "Madrid" },
+    { venue: "Vandido", city: "Madrid" },
     { date: "2025-08-22", venue: "Los Amantes", city: "Madrid" },
     { date: "2025-08-16", venue: "Los Amantes", city: "Madrid" },
     { date: "2025-08-15", venue: "Los Amantes", city: "Madrid" },
