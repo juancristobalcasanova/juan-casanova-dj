@@ -114,6 +114,7 @@ window.SITE = {
   gigs: [
     // TODO Juan: April 2026 gig — add it here once you tell me the venue
     // Venues without a known date (no `date`) still show on the "Played at" wall. Add `pos: N` to pin one to place N.
+    { venue: "Todos Santos", city: "Madrid", pos: 1 },   // last venue played
     { venue: "Istar", city: "Madrid", pos: 3 },   // pos = fixed place on the wall
     { venue: "Bonded", city: "Madrid" },
     { venue: "Vandido", city: "Madrid" },
