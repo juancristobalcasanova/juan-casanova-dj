@@ -234,6 +234,13 @@
     const lastSameCity = venues.map((v) => v.city).lastIndexOf(g.city);
     venues.splice(lastSameCity === -1 ? venues.length : lastSameCity + 1, 0, g);
   });
+  // `pos: N` pins a venue to place N on the wall (e.g. the big-name clubs)
+  valid.filter((g) => g.pos).forEach((g) => {
+    const i = venues.findIndex((v) => v.venue === g.venue);
+    if (i === -1) return;
+    const [v] = venues.splice(i, 1);
+    venues.splice(Math.min(g.pos - 1, venues.length), 0, v);
+  });
   const SHOWN = 6;
   $('gigList').innerHTML = `
     ${venues.length ? `
