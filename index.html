@@ -3,12 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // Apply saved theme + language before first paint (no flash)
+  (function () {
+    var d = document.documentElement, t = null, l = null;
+    try { t = localStorage.getItem('jc-theme'); l = localStorage.getItem('jc-lang'); } catch (e) {}
+    if (t) d.setAttribute('data-theme', t);
+    d.lang = l || (/^es/i.test(navigator.language || '') ? 'es' : 'en');
+  })();
+</script>
 <title>Juan Casanova · DJ</title>
 <meta name="description" content="Juan Casanova — DJ based in Madrid. House, afro, indie, tech.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,500;0,800;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260928104544">
+<link rel="stylesheet" href="styles.css?v=20260928105211">
 </head>
 <body>
 
@@ -16,12 +25,19 @@
   <a href="#top" class="nav-brand">Juan Casanova</a>
   <div class="nav-progress" id="progress" aria-hidden="true"></div>
   <nav class="nav-links">
-    <a href="#about">About</a>
-    <a href="#clips">Live</a>
-    <a href="#gigs">Played at</a>
-    <a href="#sets">Sets</a>
-    <a href="#unposted">Unposted</a>
-    <a href="#booking" class="nav-book" id="navBook" target="_blank" rel="noopener">Book a date</a>
+    <a href="#about" data-i18n="navAbout">About</a>
+    <a href="#clips" data-i18n="navLive">Live</a>
+    <a href="#gigs" data-i18n="navPlayedShort">Played at</a>
+    <a href="#sets" data-i18n="navSets">Sets</a>
+    <a href="#unposted" data-i18n="navUnposted">Unposted</a>
+    <a href="#booking" class="nav-book" id="navBook" target="_blank" rel="noopener" data-i18n="bookShort">Book a date</a>
+    <span class="nav-tools">
+      <button type="button" class="nav-tool" id="langToggle"></button>
+      <button type="button" class="nav-tool" id="themeToggle">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </span>
   </nav>
 </header>
 
@@ -35,13 +51,13 @@
       <path d="M232 62 a62 62 0 1 0 0 76" />
     </svg>
     <p class="hero-sub mono-label" id="heroSub"></p>
-    <a href="#about" class="hero-scroll mono-label">Scroll ↓</a>
+    <a href="#about" class="hero-scroll mono-label" data-i18n="scroll">Scroll ↓</a>
   </section>
 
   <!-- About -->
   <section id="about" class="block">
     <div class="block-head">
-      <span class="mono-label">About</span>
+      <span class="mono-label" data-i18n="navAbout">About</span>
     </div>
     <div class="about">
       <div class="about-main">
@@ -57,12 +73,12 @@
   <section id="clips" class="clips">
     <div class="clips-head">
       <div>
-        <span class="mono-label">Live</span>
-        <h2 class="clips-title">On the decks</h2>
+        <span class="mono-label" data-i18n="navLive">Live</span>
+        <h2 class="clips-title" data-i18n="clipsTitle">On the decks</h2>
       </div>
       <div class="clips-arrows">
-        <button type="button" class="clips-arrow" data-dir="-1" aria-label="Previous">←</button>
-        <button type="button" class="clips-arrow" data-dir="1" aria-label="Next">→</button>
+        <button type="button" class="clips-arrow" data-dir="-1" aria-label="Previous" data-i18n-aria="prev">←</button>
+        <button type="button" class="clips-arrow" data-dir="1" aria-label="Next" data-i18n-aria="next">→</button>
       </div>
     </div>
     <div class="clips-track" id="clipsTrack"></div>
@@ -71,7 +87,7 @@
   <!-- Gigs -->
   <section id="gigs" class="block">
     <div class="block-head">
-      <span class="mono-label">Played at</span>
+      <span class="mono-label" data-i18n="navPlayed">Played at</span>
     </div>
     <div class="gigs" id="gigList"></div>
   </section>
@@ -82,24 +98,24 @@
   <!-- Unposted gallery -->
   <section id="unposted" class="unposted">
     <div class="unposted-head">
-      <span class="mono-label">B-side</span>
-      <h2 class="unposted-title">Unposted</h2>
-      <p class="unposted-sub">Off the decks. The side that never made the feed.</p>
+      <span class="mono-label" data-i18n="bside">B-side</span>
+      <h2 class="unposted-title" data-i18n="navUnposted">Unposted</h2>
+      <p class="unposted-sub" data-i18n="unpostedSub">Off the decks. The side that never made the feed.</p>
     </div>
     <div class="unposted-grid" id="unpostedGrid"></div>
   </section>
 
   <div class="lightbox" id="lightbox" hidden>
-    <button type="button" class="lb-btn lb-close" aria-label="Close">×</button>
-    <button type="button" class="lb-btn lb-prev" aria-label="Previous">←</button>
+    <button type="button" class="lb-btn lb-close" aria-label="Close" data-i18n-aria="close">×</button>
+    <button type="button" class="lb-btn lb-prev" aria-label="Previous" data-i18n-aria="prev">←</button>
     <figure class="lb-stage"><div id="lbMedia"></div><figcaption class="mono-label" id="lbCaption"></figcaption></figure>
-    <button type="button" class="lb-btn lb-next" aria-label="Next">→</button>
+    <button type="button" class="lb-btn lb-next" aria-label="Next" data-i18n-aria="next">→</button>
   </div>
 
   <!-- Booking -->
   <section id="booking" class="booking">
-    <p class="booking-line">let's make a night.</p>
-    <a class="booking-cta" id="bookingCta" target="_blank" rel="noopener">Book a date <span>→</span></a>
+    <p class="booking-line" data-i18n="bookingLine">let's make a night.</p>
+    <a class="booking-cta" id="bookingCta" target="_blank" rel="noopener"><span data-i18n="book">Book a date</span> <span>→</span></a>
     <p class="mono-label booking-meta" id="bookingMeta"></p>
     <div class="socials mono-label" id="socials"></div>
   </section>
@@ -110,7 +126,7 @@
   <span>Madrid · Venezuela</span>
 </footer>
 
-<script src="data.js?v=20260928104544"></script>
-<script src="app.js?v=20260928104544"></script>
+<script src="data.js?v=20260928105211"></script>
+<script src="app.js?v=20260928105211"></script>
 </body>
 </html>
