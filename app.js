@@ -184,11 +184,15 @@
 
   // About
   $('bio').textContent = S.bio;
+  $('story').innerHTML = (S.story || []).map((t) => `<p>${esc(t)}</p>`).join('');
+  if (S.quote) $('quote').textContent = `“${S.quote}”`; else $('quote').remove();
   $('facts').innerHTML = [
     ['Sound', S.genres.join(', ')],
     ['Based in', S.basedIn],
     ['From', S.from],
-  ].map(([k, v]) => `<div><dt class="mono-label">${k}</dt><dd>${esc(v)}</dd></div>`).join('');
+    ['Debut', S.debut],
+    ['Influences', (S.influences || []).join(', ')],
+  ].filter(([, v]) => v).map(([k, v]) => `<div><dt class="mono-label">${k}</dt><dd>${esc(v)}</dd></div>`).join('');
 
   // Booking — one clear action: email if set, otherwise straight into an Instagram DM
   const handle = S.links.instagram.replace(/\/$/, '').split('/').pop();

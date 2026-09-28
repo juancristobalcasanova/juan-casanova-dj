@@ -8,10 +8,21 @@
 window.SITE = {
   name: "Juan Casanova",
   tagline: "DJ · Madrid",
-  bio: "DJ living in Madrid. Born and raised in Venezuela. Sets that move between house, afro, indie and tech — warm grooves that build into late-night energy.",
+  // Short line at the top of About (big type)
+  bio: "DJing since I was 13. It started in Caracas, got serious in Pamplona, and now it's Madrid.",
+  // The longer story — one string per paragraph
+  story: [
+    "It started with a green Pioneer DDJ-WeGo, then a Traktor Kontrol. Back in Caracas it was mostly friends, birthdays and house parties. Just playing for fun.",
+    "When I moved to Pamplona to study, it turned serious. I bought an XDJ and played every day with nothing booked, just to learn the craft: transitions, beatmatching, all of it. My first official gig was set for the same week COVID shut everything down.",
+    "It finally happened a year later, on Halloween night at RedBox, a club that only played underground techno. It's still my favourite night behind the decks. After that the dates kept coming. Then I moved to Madrid for work, and kept playing.",
+    "My sound leans underground: house, afro, indie and tech. I was already playing before electronic music was everywhere, and I still dig for the tracks nobody knows. What I want on the floor is simple: people who stop talking, disconnect and just move.",
+  ],
+  quote: "A good DJ gets people dancing to the music he wants to play, not the music they came to hear.",
+  influences: ["Avicii", "Carl Cox", "&ME (Keinemusik)"],
+  debut: "RedBox, Pamplona · Halloween 2021",
   genres: ["House", "Afro", "Indie", "Tech"],
   basedIn: "Madrid, ES",
-  from: "Venezuela",
+  from: "Caracas, Venezuela",
 
   links: {
     instagram: "https://www.instagram.com/juan_casanova_",
@@ -64,7 +75,7 @@ window.SITE = {
     { platform: "tiktok", url: "https://www.tiktok.com/@_juancasanova_/video/7460644068725476640", media: "photos/clips/tt-missing-redbox.jpg", caption: "Missing Redbox con los pibes y pibardas", likes: 111, comments: 21, views: 2888, label: "Missing Redbox", date: "2025-01-16" },
     { platform: "instagram", url: "https://www.instagram.com/p/C5wdXAyNg3e/", media: "photos/clips/ig-arazuri.jpg", caption: "Sun-set for @byfriendsnfamily ⚡️✌🏻", likes: 326, comments: 36, label: "Sun-set, Arazuri", date: "2024-04-14" },
     { platform: "tiktok", url: "https://www.tiktok.com/@_juancasanova_/video/7249034781889957147", media: "photos/clips/tt-redbox.jpg", caption: "🫠🫠🫠🫠", likes: 58, comments: 6, views: 957, label: "Redbox", date: "2023-06-26" },
-    { platform: "tiktok", url: "https://www.tiktok.com/@_juancasanova_/video/7248278050901609755", media: "photos/clips/tt-my-debut.jpg", caption: "My debut 🫣", likes: 87, comments: 8, views: 1724, label: "My debut", date: "2023-06-24" },
+    { platform: "tiktok", url: "https://www.tiktok.com/@_juancasanova_/video/7248278050901609755", media: "photos/clips/tt-my-debut.jpg", caption: "My debut 🫣", likes: 87, comments: 8, views: 1724, label: "My debut, RedBox Pamplona", date: "2021-10-31" },
     { platform: "instagram", url: "https://www.instagram.com/p/Cb6HI7GjSy1/", media: "photos/clips/ig-pamplona.jpg", caption: "Crème Brûlée", likes: 331, comments: 34, label: "Pamplona", date: "2022-04-03" },
     { platform: "instagram", url: "https://www.instagram.com/p/CVvt_aBodrJ/", media: "photos/clips/ig-redbox-pamplona.mp4", caption: "It was a pleasure 🍬🌚 @sessions_pamplona @redboxpamplona", likes: 354, comments: 64, label: "It was a pleasure, RedBox Pamplona", date: "2021-11-01" },
     { platform: "instagram", url: "https://www.instagram.com/p/CMs1xY4B0pa/", media: "photos/clips/ig-behind-the-decks.jpg", caption: "🎬", likes: 296, comments: 41, label: "Behind the decks", date: "2021-03-21" },
