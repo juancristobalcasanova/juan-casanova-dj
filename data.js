@@ -117,6 +117,7 @@ window.SITE = {
     { venue: "Istar", city: "Madrid" },
     { venue: "Bonded", city: "Madrid" },
     { venue: "Vandido", city: "Madrid" },
+    { venue: "Ramses", city: "Madrid" },
     { date: "2025-08-22", venue: "Los Amantes", city: "Madrid" },
     { date: "2025-08-16", venue: "Los Amantes", city: "Madrid" },
     { date: "2025-08-15", venue: "Los Amantes", city: "Madrid" },
