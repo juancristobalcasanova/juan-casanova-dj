@@ -16,11 +16,11 @@
   <a href="#top" class="nav-brand">Juan Casanova</a>
   <div class="nav-progress" id="progress" aria-hidden="true"></div>
   <nav class="nav-links">
-    <a href="#sets">Sets</a>
-    <a href="#clips">Clips</a>
-    <a href="#unposted">Unposted</a>
-    <a href="#gigs">Gigs</a>
     <a href="#about">About</a>
+    <a href="#clips">Live</a>
+    <a href="#gigs">Played at</a>
+    <a href="#sets">Sets</a>
+    <a href="#unposted">Unposted</a>
     <a href="#booking" class="nav-book" id="navBook" target="_blank" rel="noopener">Book a date</a>
   </nav>
 </header>
@@ -35,11 +35,19 @@
       <path d="M232 62 a62 62 0 1 0 0 76" />
     </svg>
     <p class="hero-sub mono-label" id="heroSub"></p>
-    <a href="#sets" class="hero-scroll mono-label">Scroll ↓</a>
+    <a href="#about" class="hero-scroll mono-label">Scroll ↓</a>
   </section>
 
-  <!-- Sets (one per screen) -->
-  <section id="sets" class="sets"></section>
+  <!-- About -->
+  <section id="about" class="block">
+    <div class="block-head">
+      <span class="mono-label">About</span>
+    </div>
+    <div class="about">
+      <p class="about-bio" id="bio"></p>
+      <dl class="about-facts" id="facts"></dl>
+    </div>
+  </section>
 
   <!-- Social posts (playable) -->
   <section id="clips" class="clips">
@@ -55,6 +63,17 @@
     </div>
     <div class="clips-track" id="clipsTrack"></div>
   </section>
+
+  <!-- Gigs -->
+  <section id="gigs" class="block">
+    <div class="block-head">
+      <span class="mono-label">Played at</span>
+    </div>
+    <div class="gigs" id="gigList"></div>
+  </section>
+
+  <!-- Sets (one per screen) -->
+  <section id="sets" class="sets"></section>
 
   <!-- Unposted gallery -->
   <section id="unposted" class="unposted">
@@ -72,25 +91,6 @@
     <figure class="lb-stage"><div id="lbMedia"></div><figcaption class="mono-label" id="lbCaption"></figcaption></figure>
     <button type="button" class="lb-btn lb-next" aria-label="Next">→</button>
   </div>
-
-  <!-- Gigs -->
-  <section id="gigs" class="block">
-    <div class="block-head">
-      <span class="mono-label">Played at</span>
-    </div>
-    <div class="gigs" id="gigList"></div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="block">
-    <div class="block-head">
-      <span class="mono-label">About</span>
-    </div>
-    <div class="about">
-      <p class="about-bio" id="bio"></p>
-      <dl class="about-facts" id="facts"></dl>
-    </div>
-  </section>
 
   <!-- Booking -->
   <section id="booking" class="booking">
