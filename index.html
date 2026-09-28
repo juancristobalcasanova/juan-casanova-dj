@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juan Casanova · DJ</title>
+<meta name="description" content="Juan Casanova — DJ based in Madrid. House, afro, indie, tech.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,500;0,800;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#top" class="nav-brand">Juan Casanova</a>
+  <div class="nav-progress" id="progress" aria-hidden="true"></div>
+  <nav class="nav-links">
+    <a href="#sets">Sets</a>
+    <a href="#clips">Clips</a>
+    <a href="#unposted">Unposted</a>
+    <a href="#gigs">Gigs</a>
+    <a href="#about">About</a>
+    <a href="#booking" class="nav-book" id="navBook" target="_blank" rel="noopener">Book a date</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <svg class="mono" viewBox="0 0 260 200" aria-label="JC">
+      <!-- J -->
+      <path d="M40 30 H120 M95 30 V130 a35 35 0 0 1 -70 0" />
+      <!-- C -->
+      <path d="M232 62 a62 62 0 1 0 0 76" />
+    </svg>
+    <p class="hero-sub mono-label" id="heroSub"></p>
+    <a href="#sets" class="hero-scroll mono-label">Scroll ↓</a>
+  </section>
+
+  <!-- Sets (one per screen) -->
+  <section id="sets" class="sets"></section>
+
+  <!-- Social posts (playable) -->
+  <section id="clips" class="clips">
+    <div class="clips-head">
+      <div>
+        <span class="mono-label">Live</span>
+        <h2 class="clips-title">On the decks</h2>
+      </div>
+      <div class="clips-arrows">
+        <button type="button" class="clips-arrow" data-dir="-1" aria-label="Previous">←</button>
+        <button type="button" class="clips-arrow" data-dir="1" aria-label="Next">→</button>
+      </div>
+    </div>
+    <div class="clips-track" id="clipsTrack"></div>
+  </section>
+
+  <!-- Unposted gallery -->
+  <section id="unposted" class="unposted">
+    <div class="unposted-head">
+      <span class="mono-label">B-side</span>
+      <h2 class="unposted-title">Unposted</h2>
+      <p class="unposted-sub">Off the decks. The side that never made the feed.</p>
+    </div>
+    <div class="unposted-grid" id="unpostedGrid"></div>
+  </section>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lb-btn lb-close" aria-label="Close">×</button>
+    <button type="button" class="lb-btn lb-prev" aria-label="Previous">←</button>
+    <figure class="lb-stage"><div id="lbMedia"></div><figcaption class="mono-label" id="lbCaption"></figcaption></figure>
+    <button type="button" class="lb-btn lb-next" aria-label="Next">→</button>
+  </div>
+
+  <!-- Gigs -->
+  <section id="gigs" class="block">
+    <div class="block-head">
+      <span class="mono-label">Played at</span>
+    </div>
+    <div class="gigs" id="gigList"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="block">
+    <div class="block-head">
+      <span class="mono-label">About</span>
+    </div>
+    <div class="about">
+      <p class="about-bio" id="bio"></p>
+      <dl class="about-facts" id="facts"></dl>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="booking">
+    <p class="booking-line">let's make a night.</p>
+    <a class="booking-cta" id="bookingCta" target="_blank" rel="noopener">Book a date <span>→</span></a>
+    <p class="mono-label booking-meta" id="bookingMeta"></p>
+    <div class="socials mono-label" id="socials"></div>
+  </section>
+</main>
+
+<footer class="foot mono-label">
+  <span>© <span id="year"></span> Juan Casanova</span>
+  <span>Madrid · Venezuela</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
