@@ -245,7 +245,7 @@
   $('gigList').innerHTML = `
     ${venues.length ? `
     <div class="venues reveal">
-      <p class="venues-list">${venues.map((g) => `<span>${esc(g.event || g.venue)}<sup>${esc(g.event ? g.venue : g.city)}</sup></span>`).join('')}</p>
+      <p class="venues-list">${venues.map((g) => `<span>${g.event ? `${esc(g.event)}<em class="venue-at">(${esc(g.venue)})</em>` : esc(g.venue)}<sup>${esc(g.city)}</sup></span>`).join('')}</p>
     </div>` : ''}
     ${upcoming.length ? `<div class="gig-group">
       <span class="mono-label">${t('upcoming')}</span>

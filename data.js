@@ -129,7 +129,7 @@ window.SITE = {
     { date: "2025-02-06", venue: "Los Amantes", city: "Madrid" },
     { date: "2025-01-02", venue: "Los Amantes", city: "Madrid" },
     { date: "2024-11-13", venue: "Nômadâ", city: "Madrid", with: "Soirée" },
-    { date: "2024-04-13", venue: "Castillo de Arazuri", city: "Navarra", event: "Friends&Family", with: "Yubik" },   // event = name shown on the wall
+    { date: "2024-04-13", venue: "Castillo de Arazuri", city: "Pamplona", event: "Friends&Family", with: "Yubik" },   // event = name shown on the wall
     { date: "2023-09-28", venue: "Kato's", city: "Pamplona" },
     { date: "2023-09-09", venue: "Sala Enter", city: "Pamplona" },
     { date: "2023-03-25", venue: "RedBox", city: "Pamplona", with: "Soirée" },

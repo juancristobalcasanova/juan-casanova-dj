@@ -467,3 +467,6 @@ img, iframe { max-width: 100%; }
   .mono, .mono path { animation: none; stroke-dashoffset: 0; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* Event name + venue on the Played-at wall, e.g. Friends&Family (Castillo de Arazuri) */
+.venue-at { white-space: nowrap; font-style: normal; font-weight: 300; font-size: .5em; letter-spacing: -.01em; margin-left: .3em; color: var(--fg-soft); text-transform: none; vertical-align: .35em; }
