@@ -203,8 +203,8 @@
       const b = e.target.closest('.shot[data-i]');
       if (b) openLb(shots, +b.dataset.i);
     });
-  } else if (isLocal) {
-    // Preview-only placeholders so the layout is visible before photos are added
+  } else if (isLocal || S.unpostedPlaceholders) {
+    // Empty boxes so the layout is visible before photos are added (live only if unpostedPlaceholders: true)
     const ratios = ['4/5', '1/1', '3/4', '4/3', '4/5', '3/4'];
     grid.innerHTML = ratios.map((r, i) => `
       <div class="shot shot-ph" style="aspect-ratio:${r}"><span class="mono-label">${t('photo')} ${pad(i + 1)}</span></div>`).join('');

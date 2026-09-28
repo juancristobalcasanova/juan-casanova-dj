@@ -110,6 +110,8 @@ window.SITE = {
   // Drop files into photos/unposted/ and list them here. .jpg / .png / .webp / .mp4
   unposted: [
   ],
+  // true = show empty boxes on the live site while the photos are missing. Set to false (or add photos) later.
+  unpostedPlaceholders: true,
 
   // false = show only the venue names (no dates). true = also list every date.
   showDates: false,
