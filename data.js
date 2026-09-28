@@ -17,6 +17,11 @@ window.SITE = {
     "It finally happened a year later, on Halloween night at RedBox, a club that only played underground techno. It's still my favourite night behind the decks. After that the dates kept coming. Then I moved to Madrid for work, and kept playing.",
     "My sound leans underground: house, afro, indie and tech. I was already playing before electronic music was everywhere, and I still dig for the tracks nobody knows. What I want on the floor is simple: people who stop talking, disconnect and just move.",
   ],
+  // Press kit bio (third person — promoters copy/paste this into event posts)
+  pressBio: [
+    "Juan Casanova is a Venezuelan DJ based in Madrid. He started at 13 in Caracas, got serious in Pamplona, and made his official debut on Halloween 2021 at RedBox, a club dedicated to underground techno.",
+    "Since then he has played across Pamplona and Madrid, in rooms like Todos Santos, Istar, La Victoria and Los Amantes. His sound leans underground: house, afro, indie and tech, built on tracks most of the crowd hasn't heard yet.",
+  ],
   quote: "A good DJ gets people dancing to the music he wants to play, not the music they want to hear.",
   influences: ["Avicii", "Carl Cox", "&ME (Keinemusik)"],
   debut: "RedBox, Pamplona · Halloween 2021",
@@ -33,6 +38,10 @@ window.SITE = {
       "Cuando me mudé a Pamplona a estudiar, la cosa se puso seria. Me compré una XDJ y pinchaba todos los días sin ninguna fecha cerrada, solo para aprender el oficio: transiciones, beatmatching, todo. Mi primer bolo oficial estaba fijado para la misma semana en que el COVID lo cerró todo.",
       "Llegó por fin un año después, la noche de Halloween en RedBox, un club donde solo sonaba techno underground. Sigue siendo mi noche favorita en cabina. Después de eso, las fechas no pararon. Luego me mudé a Madrid por trabajo y seguí pinchando.",
       "Mi sonido tira a underground: house, afro, indie y tech. Ya pinchaba antes de que la electrónica estuviera en todas partes, y sigo buscando los temas que nadie conoce. Lo que quiero en la pista es simple: gente que deja de hablar, desconecta y solo se mueve.",
+    ],
+    pressBio: [
+      "Juan Casanova es un DJ venezolano afincado en Madrid. Empezó a los 13 en Caracas, se lo tomó en serio en Pamplona y debutó oficialmente en Halloween de 2021 en RedBox, un club dedicado al techno underground.",
+      "Desde entonces ha pinchado en Pamplona y Madrid, en salas como Todos Santos, Istar, La Victoria y Los Amantes. Su sonido tira a underground: house, afro, indie y tech, con temas que la mayoría de la pista aún no ha escuchado.",
     ],
     quote: "Un buen DJ hace bailar a la gente con la música que él quiere poner, no con la que ellos quieren escuchar.",
     debut: "RedBox, Pamplona · Halloween 2021",
@@ -95,7 +104,6 @@ window.SITE = {
     { platform: "tiktok", url: "https://www.tiktok.com/@_juancasanova_/video/7248278050901609755", media: "photos/clips/tt-my-debut.jpg", caption: "My debut 🫣", likes: 87, comments: 8, views: 1724, label: "My debut, RedBox Pamplona", labelEs: "Mi debut, RedBox Pamplona", date: "2021-10-31" },
     { platform: "instagram", url: "https://www.instagram.com/p/Cb6HI7GjSy1/", media: "photos/clips/ig-pamplona.jpg", caption: "Crème Brûlée", likes: 331, comments: 34, label: "Pamplona", date: "2022-04-03" },
     { platform: "instagram", url: "https://www.instagram.com/p/CVvt_aBodrJ/", media: "photos/clips/ig-redbox-pamplona.mp4", caption: "It was a pleasure 🍬🌚 @sessions_pamplona @redboxpamplona", likes: 354, comments: 64, label: "It was a pleasure, RedBox Pamplona", labelEs: "Fue un placer, RedBox Pamplona", date: "2021-11-01" },
-    { platform: "instagram", url: "https://www.instagram.com/p/CMs1xY4B0pa/", media: "photos/clips/ig-behind-the-decks.jpg", caption: "🎬", likes: 296, comments: 41, label: "Behind the decks", labelEs: "En cabina", date: "2021-03-21" },
   ],
 
   // "Unposted" — Juan's own photos that never made the feed. Off the decks, the real you.
