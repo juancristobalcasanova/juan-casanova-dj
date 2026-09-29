@@ -101,6 +101,8 @@ window.SITE = {
     { platform: "instagram", url: "https://www.instagram.com/p/C5wdXAyNg3e/", media: "photos/clips/ig-arazuri.jpg", caption: "Sun-set for @byfriendsnfamily ⚡️✌🏻", likes: 326, comments: 36, label: "Sun-set, Arazuri", date: "2024-04-14" },
     { platform: "tiktok", url: "https://www.tiktok.com/@_juancasanova_/video/7249034781889957147", media: "photos/clips/tt-redbox.jpg", caption: "🫠🫠🫠🫠", likes: 58, comments: 6, views: 957, label: "Redbox", date: "2023-06-26" },
     { platform: "tiktok", url: "https://www.tiktok.com/@_juancasanova_/video/7248278050901609755", media: "photos/clips/tt-my-debut.jpg", caption: "My debut 🫣", likes: 87, comments: 8, views: 1724, label: "My debut, RedBox Pamplona", labelEs: "Mi debut, RedBox Pamplona", date: "2021-10-31" },
+    // Stories (saved from the archive / highlights) — .mp4 files play on their own like the Instagram posts
+    { platform: "instagram", url: "https://www.instagram.com/juan_casanova_/", media: "photos/clips/ig-story-redbox-halloween-2022.mp4", label: "Halloween, RedBox Pamplona", date: "2022-10-31" },
     { platform: "instagram", url: "https://www.instagram.com/p/Cb6HI7GjSy1/", media: "photos/clips/ig-pamplona.jpg", caption: "Crème Brûlée", likes: 331, comments: 34, label: "Pamplona", date: "2022-04-03" },
     { platform: "instagram", url: "https://www.instagram.com/p/Cb6HI7GjSy1/", media: "photos/clips/ig-pamplona-video-3.mp4", label: "Pamplona", date: "2022-04-03" },
     { platform: "instagram", url: "https://www.instagram.com/p/Cb6HI7GjSy1/", media: "photos/clips/ig-pamplona-video-4.mp4", label: "Pamplona", date: "2022-04-03" },
